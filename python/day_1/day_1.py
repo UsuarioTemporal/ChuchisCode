@@ -8,5 +8,8 @@ items = archive.readlines()
 
 """
     with open('ruta') as file :
-        items = [int(line.strip() for in file)]
+        items = [int(line.strip()) for in file)]
 """
+
+def correctAllFrequences()->int:
+    pass
