@@ -18,9 +18,11 @@ def correctAllFrequences():
 ob = correctAllFrequences()
 
 try:
+    frecuency = 0
     while True:
-        print(next(ob))
+        frecuency+=int(next(ob))
 except Exception:
     pass
 finally:
+    print(frecuency)
     archive.close()
