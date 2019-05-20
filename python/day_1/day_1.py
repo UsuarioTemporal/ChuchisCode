@@ -1,0 +1,1 @@
+# Calibrar el dispositivo
