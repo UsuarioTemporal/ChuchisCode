@@ -5,8 +5,8 @@
 
 archive = open('input.txt','r')
 items = archive.readlines()
-def make(items):
-    for line in items: 
-        while True :
-            yield line
-archive.close()
+
+"""
+    with open('ruta') as file :
+        items = [int(line.strip() for in file)]
+"""
