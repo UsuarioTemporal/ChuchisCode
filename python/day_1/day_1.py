@@ -4,6 +4,9 @@
 # archivo.close()
 
 archive = open('input.txt','r')
-for line in archive.readlines(): 
-    print(int(line))
+items = archive.readlines()
+def make(items):
+    for line in items: 
+        while True :
+            yield line
 archive.close()
