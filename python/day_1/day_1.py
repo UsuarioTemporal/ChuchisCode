@@ -11,5 +11,16 @@ items = archive.readlines()
         items = [int(line.strip()) for in file)]
 """
 
-def correctAllFrequences()->int:
+def correctAllFrequences():
+    for line in items:
+        yield line
+
+ob = correctAllFrequences()
+
+try:
+    while True:
+        print(next(ob))
+except Exception:
     pass
+finally:
+    archive.close()
