@@ -20,7 +20,7 @@ def allFrequencies(items: list,start: int=0):
         for item in items :
             yield frequency
             frequency+=item
-def findRepetition(items:list,start: int=0):
+def findRepetition(items:list):
     noRepeat =set()
     for frequency in allFrequencies(items) :
         if frequency in noRepeat : return frequency
