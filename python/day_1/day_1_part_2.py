@@ -14,8 +14,13 @@ with open('input_2.txt','r') as file :
 #     (At this point, the device continues from the start of the list.)
 #     Current frequency  3, change of +1; resulting frequency  4.
 #     Current frequency  4, change of -2; resulting frequency  2, which has already been seen.
-
-def findRepetition( ):
+def allFrequencies(items: list,start: int=0):
+    frequency=start
+    while True :
+        for item in items :
+            yield frequency
+            frequency+=item
+def findRepetition(items:list,start: int=0):
     pass
 
-print(items)
+# print(sum(items))
