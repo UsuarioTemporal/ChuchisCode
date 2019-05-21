@@ -21,6 +21,10 @@ def allFrequencies(items: list,start: int=0):
             yield frequency
             frequency+=item
 def findRepetition(items:list,start: int=0):
-    pass
-
+    noRepeat =set()
+    for frequency in allFrequencies(items) :
+        if frequency in noRepeat : return frequency
+        noRepeat.add(frequency)
+# findRepetition(items)
 # print(sum(items))
+print(findRepetition(items))
