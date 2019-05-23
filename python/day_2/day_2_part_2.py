@@ -5,15 +5,15 @@ data = [line.strip() for line in open('input.txt').readlines()]
 # Ejm fghij y fguij solo se diferencian en h y u en la tercera posicion(2) entonces la cadena a mostrar será fgij
 #
 
-dat =[
-    'abcde',
-    'fghij',
-    'klmno',
-    'pqrst',
-    'fguij',
-    'axcye',
-    'wvxyz'
-]
+# data =[
+#     'abcde',
+#     'fghij',
+#     'klmno',
+#     'pqrst',
+#     'fguij',
+#     'axcye',
+#     'wvxyz'
+# ]
 def groupByLetters(input):
     countLetters={}
     for letter in input :
@@ -31,7 +31,19 @@ def removeFrom(string,position):
 def generateSublist(_list:list,index:int)->list:
     return list(map(lambda str:removeFrom(str,index),_list))
 
-print(generateSublist())
+for index in range(len(data[0])):
+    subListInput = generateSublist(data,index)
+    if len(set(subListInput))==len(data) : continue
+    # print(subListInput)
+    # break
+    for key,value in groupByLetters(subListInput).items():
+        if value==2 : 
+            print(key)
+            break
+        
+    break
+
+# print(generateSublist(data,0))
 
 # repetitions = list(map(isValidString,data))
 # print(repetitions)
