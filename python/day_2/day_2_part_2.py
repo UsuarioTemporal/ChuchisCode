@@ -1,6 +1,19 @@
 data = [line.strip() for line in open('input.txt').readlines()]
 # print(data)
+#El problema radica en que teemos que demostrar cual es la cadena que solo se diferencian en una letra
+# y mostrar la cadena restante
+# Ejm fghij y fguij solo se diferencian en h y u en la tercera posicion(2) entonces la cadena a mostrar será fgij
+#
 
+dat =[
+    'abcde',
+    'fghij',
+    'klmno',
+    'pqrst',
+    'fguij',
+    'axcye',
+    'wvxyz'
+]
 def groupByLetters(input):
     countLetters={}
     for letter in input :
